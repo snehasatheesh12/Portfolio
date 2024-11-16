@@ -49,9 +49,9 @@ def contact(request):
 
 
 def download_cv(request):
-    file_path = os.path.join('static', 'resume', 'sneha_resume.pdf')
+    file_path = os.path.join('static', 'resume', 'SNEHA.pdf')
     
     if os.path.exists(file_path):
-        return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='sneha_resume.pdf')
+        return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='SNEHA.pdf')
     else:
         raise Http404("File not found")
